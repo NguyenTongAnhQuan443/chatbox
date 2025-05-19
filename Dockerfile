@@ -1,17 +1,11 @@
-FROM python:3.10-slim
+FROM rasa/rasa:3.6.10-full
 
-# Tạo thư mục app
+# Copy project files
+COPY . /app
 WORKDIR /app
 
-# Copy toàn bộ code vào image
-COPY . .
-
-# Cài pip và các thư viện
-RUN pip install --upgrade pip
-RUN pip install rasa[full] requests
-
-# Mở cổng mặc định
+# Expose Rasa port
 EXPOSE 5005
 
-# Lệnh để start chatbot
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
+# Default command
+CMD ["run", "--enable-api", "--cors", "*", "--debug"]
