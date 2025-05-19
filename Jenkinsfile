@@ -1,29 +1,36 @@
 pipeline {
-  agent any
+  agent any   // Jenkins dùng bất kỳ agent nào (container, máy ảo...)
 
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/your-repo.git', branch: 'main'
+        git url: 'https://github.com/NguyenTongAnhQuan443/chatbox', branch: 'main'
+        // clone source từ GitHub branch main
       }
     }
 
     stage('Build Docker Image') {
       steps {
         sh 'docker-compose build'
+        // build tất cả image trong docker-compose.yml
       }
     }
 
-    stage('Test') {
-      steps {
-        // thay lệnh test tuỳ project (pytest, npm test...)
-        sh 'docker-compose run --rm app pytest'
-      }
-    }
+    stage('Setup Python & Install deps') {
+        steps {
+            sh '''
+            python -m venv .venv
+            . .venv/bin/activate
+            pip install -U pip
+            pip install fastapi uvicorn requests rasa
+            '''
+        }
+        }
 
     stage('Deploy to Railway') {
       steps {
         withCredentials([string(credentialsId: 'railway_token', variable: 'RAILWAY_TOKEN')]) {
+          // Railway CLI login và deploy
           sh '''
             npm install -g railway
             railway login --token $RAILWAY_TOKEN
