@@ -1,42 +1,22 @@
 pipeline {
-  agent any   // Jenkins dùng bất kỳ agent nào (container, máy ảo...)
+  agent any
 
   stages {
     stage('Checkout') {
       steps {
         git url: 'https://github.com/NguyenTongAnhQuan443/chatbox', branch: 'main'
-        // clone source từ GitHub branch main
       }
     }
 
-    stage('Build Docker Image') {
+    // Gửi request đến chatbot sau deploy để kiểm tra "bot còn sống"
+    stage('Health Check (CD verification)') {
       steps {
-        sh 'docker-compose build'
-        // build tất cả image trong docker-compose.yml
-      }
-    }
-
-    stage('Setup Python & Install deps') {
-        steps {
-            sh '''
-            python -m venv .venv
-            . .venv/bin/activate
-            pip install -U pip
-            pip install fastapi uvicorn requests rasa
-            '''
-        }
-        }
-
-    stage('Deploy to Railway') {
-      steps {
-        withCredentials([string(credentialsId: 'railway_token', variable: 'RAILWAY_TOKEN')]) {
-          // Railway CLI login và deploy
-          sh '''
-            npm install -g railway
-            railway login --token $RAILWAY_TOKEN
-            railway up --service your-service-name
-          '''
-        }
+        sh '''
+          sleep 10  # chờ Railway restart nếu có
+          curl -X POST https://chatbox-production-71c0.up.railway.app/webhooks/rest/webhook \
+            -H "Content-Type: application/json" \
+            -d '{"sender":"jenkins_test","message":"xin chào"}'
+        '''
       }
     }
   }
