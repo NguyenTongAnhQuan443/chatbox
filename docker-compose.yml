@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "1010:8080" 
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+volumes:
+  jenkins_home:

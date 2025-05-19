@@ -1,0 +1,21 @@
+version: "3.1"
+rules:
+- rule: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: say thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: search room
+  steps:
+  - intent: search_room
+  - action: action_search_room

@@ -1,0 +1,30 @@
+version: "3.1"
+intents:
+  - search_room
+  - greet
+  - goodbye
+  - thanks
+
+entities:
+  - street
+  - district
+  - city
+  - minPrice
+  - maxPrice
+  - areaRange
+  - roomType
+  - amenities
+  - environment
+  - targetAudience
+  - hasVideoReview
+
+responses:
+  utter_greet:
+    - text: "Xin chào! Tôi có thể giúp gì cho bạn?"
+  utter_goodbye:
+    - text: "Cảm ơn bạn! Hẹn gặp lại!"
+  utter_thanks:
+    - text: "Không có gì đâu bạn nha!"
+
+actions:
+  - action_search_room

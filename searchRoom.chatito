@@ -1,0 +1,121 @@
+%[searchRoom]
+    ~[intro] ~[amenities] ~[location_phrase] ~[district]
+
+~[intro]
+    Tôi muốn tìm phòng có
+    Có phòng nào có
+    Tìm trọ có
+    Cho tôi thuê phòng có
+    Cần tìm phòng có
+
+~[amenities]
+    wifi
+    máy lạnh
+    tủ lạnh
+    giường
+    nệm
+    tủ quần áo
+    bàn học
+    máy nước nóng
+    máy giặt
+    bếp điện
+    bếp gas
+    bếp từ
+    máy hút bụi
+    lò vi sóng
+    lò nướng
+    tivi
+    camera an ninh
+    thang máy
+    chỗ để xe
+    bảo vệ 24/7
+    ban công
+    cửa sổ lớn
+    máy sấy quần áo
+    cửa cuốn
+    hệ thống PCCC
+    khóa vân tay
+    khóa từ
+    quạt trần
+    điều hòa hai chiều
+    nước nóng năng lượng mặt trời
+    đèn LED tiết kiệm điện
+    rèm cửa
+    gác lửng
+    toilet riêng
+    toilet chung
+    tủ giày
+    hệ thống lọc nước
+    nước máy
+    điện riêng
+    wifi miễn phí
+    có phòng khách
+    sân phơi đồ
+    ghế sofa
+    bàn ăn
+    kệ sách
+    gương lớn
+    gác xép
+    giặt ủi chung
+    máy lạnh inverter
+
+~[location_phrase]
+    ở
+    tại
+    trong khu vực
+    gần
+    khu
+    vùng
+
+~[district]
+    Quận 1
+    Quận 2
+    Quận 3
+    Quận 4
+    Quận 5
+    Quận 6
+    Quận 7
+    Quận 8
+    Quận 9
+    Quận 10
+    Quận 11
+    Quận 12
+    Quận Tân Bình
+    Quận Bình Thạnh
+    Quận Gò Vấp
+    Quận Phú Nhuận
+    Quận Thủ Đức
+    Quận Tân Phú
+    Quận Bình Tân
+    Huyện Bình Chánh
+    Huyện Hóc Môn
+    Huyện Củ Chi
+    Huyện Cần Giờ
+    Huyện Nhà Bè
+    Quận Hoàng Mai
+    Quận Thanh Xuân
+    Quận Cầu Giấy
+    Quận Nam Từ Liêm
+    Quận Bắc Từ Liêm
+    Quận Hà Đông
+    Quận Đống Đa
+    Quận Hai Bà Trưng
+    Quận Tây Hồ
+    Quận Ba Đình
+    Quận Long Biên
+    Quận Hoàn Kiếm
+    Huyện Gia Lâm
+    Huyện Đông Anh
+    Huyện Sóc Sơn
+    Huyện Thanh Trì
+    Huyện Mê Linh
+    Huyện Hoài Đức
+    Huyện Đan Phượng
+    Huyện Thường Tín
+    Huyện Phúc Thọ
+    Huyện Quốc Oai
+    Huyện Thanh Oai
+    Huyện Mỹ Đức
+    Huyện Ba Vì
+    Huyện Ứng Hòa
+    Huyện Chương Mỹ

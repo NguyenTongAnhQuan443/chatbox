@@ -1,0 +1,12 @@
+version: "3.1"
+stories:
+- story: user searches room after greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_room
+  - action: action_search_room
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
