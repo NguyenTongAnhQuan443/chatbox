@@ -10,3 +10,4 @@ EXPOSE 5005
 
 # Default command
 CMD ["run", "--enable-api", "--cors", "*", "--debug"]
+# Không dùng nữa
