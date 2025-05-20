@@ -4,7 +4,7 @@ services:
     name: rasa-core
     env: docker
     # dockerfilePath: Dockerfile
-    image: nguyentonganhquan/action-server:latest
+    image: nguyentonganhquan/rasa-core:latest
     plan: free
     autoDeploy: true
     envVars:
@@ -14,7 +14,8 @@ services:
   - type: web
     name: action-server
     env: docker
-    dockerfilePath: Dockerfile.action
+    # dockerfilePath: Dockerfile.action
+    image: nguyentonganhquan/action-server:latest
     plan: free
     autoDeploy: true
     envVars:
