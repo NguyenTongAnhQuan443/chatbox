@@ -108,7 +108,7 @@ class ActionSearchRoom(Action):
         if has_video_review:
             params["hasVideoReview"] = has_video_review
 
-        url = "http://localhost:8222/api/v1/rooms/search"
+        url = "https://trotot-backend-api-gateway-1-0.onrender.com/api/v1/rooms/search"
         query_string = urlencode(params, doseq=True)
         print(f"Requesting API URL: {url}?{query_string}")
 
