@@ -9,4 +9,4 @@ WORKDIR /app
 EXPOSE 5005
 
 # Default command
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
+CMD ["run", "--enable-api", "--cors", "*", "--debug"]
