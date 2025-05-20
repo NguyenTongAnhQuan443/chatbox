@@ -1,11 +1,12 @@
+// - 5
 pipeline {
   agent any
 
   environment {
     // Đặt webhook của Render (Web Service > Manual Deploy > Deploy Hook)
     RENDER_DEPLOY_HOOK = 'https://api.render.com/deploy/srv-xxxxxxxxxxxx?key=deploy_hook_key'
-    RASA_CORE_URL = 'https://ten-app-cua-ban.onrender.com'
-    ACTION_SERVER_URL = 'https://ten-action-server.onrender.com'
+    RASA_CORE_URL = 'https://rasa-core-npc8.onrender.com'
+    ACTION_SERVER_URL = 'https://action-server-le3i.onrender.com'
   }
 
   stages {
@@ -15,7 +16,7 @@ pipeline {
       }
     }
 
-    // Nếu bạn muốn build & push image lên registry, thêm stage này:
+    // Nếu muốn build & push image lên registry, thêm stage này:
     // stage('Build and Push Docker Images') {
     //   steps {
     //     sh 'docker-compose build'

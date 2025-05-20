@@ -1,9 +1,9 @@
-# render.yaml
+# - 5
 services:
   - type: web
     name: rasa-core
     env: docker
-    dockerfilePath: Dockerfile.rasa
+    dockerfilePath: Dockerfile
     plan: free
     autoDeploy: true
     envVars:

@@ -1,7 +1,8 @@
+# - 2
 FROM rasa/rasa-sdk:3.6.10
 
-# Copy code actions vào image (tùy bạn lưu file actions.py hay thư mục actions/)
-COPY actions.py /app/actions.py
+# Copy code actions vào image
+COPY actions /app/actions
 WORKDIR /app
 
 # Mở port cho action server

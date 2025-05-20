@@ -1,3 +1,4 @@
+# - 1
 FROM rasa/rasa:3.6.10-full
 
 # Copy project files
