@@ -34,3 +34,5 @@
 
 
 
+### build docker
+docker build -t your-dockerhub-username/action-server:latest -f Dockerfile.action .
