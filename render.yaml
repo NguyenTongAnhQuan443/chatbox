@@ -1,0 +1,21 @@
+# render.yaml
+services:
+  - type: web
+    name: rasa-core
+    env: docker
+    dockerfilePath: Dockerfile.rasa
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5005
+
+  - type: web
+    name: action-server
+    env: docker
+    dockerfilePath: Dockerfile.action
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5055

@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  rasa:
+    image: rasa/rasa:3.6.10-full
+    command: run --enable-api --cors "*" --debug --port 5005 --host 0.0.0.0
+    volumes:
+      - ./:/app
+    ports:
+      - "5005:5005"
+    depends_on:
+      - action_server
+
+  action_server:
+    image: rasa/rasa-sdk:3.6.10
+    command: run actions --debug --port 5055 --host 0.0.0.0
+    volumes:
+      - ./actions:/app/actions
+    ports:
+      - "5055:5055"
