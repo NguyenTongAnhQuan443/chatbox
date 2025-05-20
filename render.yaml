@@ -1,10 +1,8 @@
-# - 5
 services:
   - type: web
     name: rasa-core
     env: docker
-    image:
-      url: nguyentonganahquan/rasa-core:latest
+    image: nguyentonganhquan/rasa-core:latest
     plan: free
     autoDeploy: true
     envVars:
@@ -14,12 +12,9 @@ services:
   - type: web
     name: action-server
     env: docker
-    image:
-      url: nguyentonganahquan/action-server:latest
+    image: nguyentonganhquan/action-server:latest
     plan: free
     autoDeploy: true
     envVars:
       - key: PORT
         value: 5055
-
-
