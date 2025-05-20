@@ -1,5 +1,5 @@
 # - 1
-FROM rasa/rasa:3.6.10-full
+FROM rasa/rasa-sdk:3.5.6
 
 # Copy project files
 COPY . /app
